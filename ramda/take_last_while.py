@@ -11,5 +11,5 @@ def take_last_while(predicate, list):
     (value)"""
     for i, e in enumerate(reversed(list)):
         if not predicate(e):
-            return list[-i:]
+            return list[-(i - 1) :] if i == 0 else list[-i:]
     return list
